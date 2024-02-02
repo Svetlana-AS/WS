@@ -1,8 +1,32 @@
-// Convert a Number to a String
+// I love you, a little , a lot, passionately ... not at all
 
-function numberToString(num) {
-    // Return a string of the number here!
-    return String(num);
+
+function howMuchILoveYou(nbPetals) {
+    const rules = [
+        "I love you",
+        "a little",
+        "a lot",
+        "passionately",
+        "madly",
+        "not at all",
+    ]
+    let index = nbPetals % 6 - 1
+    if (index === -1)   index = rules.length -1;
+    return rules[index]
 }
 
 
+// 1. `const rules`: Массив, содержащий шесть строк, каждая из которых представляет разный уровень любви.
+//
+// 2. `let index = nbPetals % 6 - 1;`: Эта строка вычисляет индекс массива `rules` на основе количества лепестков
+// (`nbPetals`). Оператор модуля `%` используется для того, чтобы убедиться, что индекс остается в пределах от 0 до 5. `- 1`
+// используется для преобразования диапазона с 1 по 6 в диапазон с 0 по 5.
+//
+// 3. `if (index === -1) { index = rules.length - 1; }`: Если вычисленный индекс равен -1 (что происходит, когда `nbPetals` кратно 6),
+// он корректируется так, чтобы указывать на последний элемент массива `rules`.
+//
+// 4. `return rules[index];`: Функция возвращает сообщение, соответствующее вычисленному индексу в массиве `rules`,
+//     выражая уровень любви в зависимости от количества оторванных лепестков.
+//
+//     Таким образом, например, если вызвать `howMuchILoveYou(8)`, функция вернет "много", потому что 8 % 6 - 1 равно 1,
+//     и соответствующее сообщение - "много".
