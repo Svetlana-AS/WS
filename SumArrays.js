@@ -1,5 +1,10 @@
-// Sum of positive
-// Example [1,-4,7,12] => 1 + 7 + 12 = 20
+// Sum Arrays
+
+
+function sum (numbers) {
+    return numbers.reduce((sum,el) => sum+el, 0)
+}
+
 
 
 function positiveSum(arr) {
