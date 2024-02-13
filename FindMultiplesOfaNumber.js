@@ -10,5 +10,5 @@ function findMultiples(integer, limit) {
 
     return arrayResult
 
-}
 
+}
