@@ -10,3 +10,10 @@ function getAge(inputString){
 function makeUpperCase(str) {
  return str.toUpperCase()
 }
+
+class Solution {
+    static main(...args) {
+        console.log('Hello World')
+    }
+
+}
